@@ -1,0 +1,30 @@
+{
+  "name": "worktank-vite-plugin",
+  "repository": "github:fabiospampinato/worktank-vite-plugin",
+  "description": "Vite plugin for WorkTank which enables you to execute whole files in a worker pool, transparently.",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
+    "test": "cd test && npm run compile && node test.js",
+    "prepublishOnly": "npm run clean && npm run compile && npm run test"
+  },
+  "keywords": [
+    "worktank",
+    "vite",
+    "plugin"
+  ],
+  "dependencies": {
+    "worktank-esbuild-plugin": "^1.0.0"
+  },
+  "devDependencies": {
+    "tsex": "^1.1.2",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.9"
+  }
+}
