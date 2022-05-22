@@ -10,6 +10,8 @@ npm install --save worktank-vite-plugin
 
 ## Usage
 
+For more information read [this](https://github.com/fabiospampinato/worktank-loader).
+
 ```ts
 import {defineConfig} from 'vite';
 import worktank from 'worktank-vite-plugin';
