@@ -2,4 +2,4 @@
 /* IMPORT */
 
 import 'webworker-shim/register';
-import './dist/test.umd.js';
+import './dist/test.umd.cjs';

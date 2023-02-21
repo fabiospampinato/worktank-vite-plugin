@@ -1,20 +1,21 @@
 
 /* IMPORT */
 
-import type {Plugin} from 'vite';
 import {transform} from 'worktank-esbuild-plugin';
+import type {Plugin as EsbuildPlugin} from 'esbuild';
+import type {Plugin as VitePlugin} from 'vite';
 
 /* MAIN */
 
-const plugin = ({ filter }: { filter: RegExp }) => {
+const plugin = ({ filter, plugins }: { filter: RegExp, plugins: EsbuildPlugin[] }): VitePlugin => {
 
-  return <Plugin> {
+  return {
     name: 'worktank',
     load ( filePath ) {
 
       if ( !filter.test ( filePath ) ) return;
 
-      return transform ( filePath );
+      return transform ( filePath, plugins );
 
     }
   };
