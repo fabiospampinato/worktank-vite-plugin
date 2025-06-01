@@ -1,16 +1,16 @@
 
-// WORKTANK_NAME = MyExampleWorker // Setting a custom name
-// WORKTANK_SIZE = 3 // Spawining up-to 3 workers, if needed
+// WORKTANK_OPTIONS={pool:{name:'MyExampleWorker',size:3}}
 
 /* IMPORT */
 
 import mime2ext from 'mime2ext';
+import type WorkTank from 'worktank';
 
 /* MAIN */
 
 const sum = async ( a: number, b: number ) => a + b;
 const multiply = async ( a: number, b: number ): Promise<number> => a * b;
-const pool = {} as { terminate: Function }; // Dummy export to ~tell TypeScript about the injected "pool" export
+const pool = {} as WorkTank<any>; // Dummy export to ~tell TypeScript about the injected "pool" export
 
 /* EXPORT */
 

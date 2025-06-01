@@ -2,6 +2,7 @@
   "name": "worktank-vite-plugin",
   "repository": "github:fabiospampinato/worktank-vite-plugin",
   "description": "Vite plugin for WorkTank which enables you to execute whole files in a worker pool, transparently.",
+  "license": "MIT",
   "version": "1.1.0",
   "type": "module",
   "main": "dist/index.js",
@@ -20,15 +21,15 @@
     "plugin"
   ],
   "dependencies": {
-    "worktank-esbuild-plugin": "^1.1.0"
+    "worktank-esbuild-plugin": "^2.0.0"
   },
   "peerDependencies": {
     "esbuild": "*"
   },
   "devDependencies": {
-    "esbuild": "^0.19.0",
-    "tsex": "^3.0.1",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.9"
+    "esbuild": "^0.25.5",
+    "tsex": "^4.0.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   }
 }

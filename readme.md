@@ -1,16 +1,18 @@
 # WorkTank Vite Plugin
 
-Vite plugin for WorkTank which enables you to execute whole files in a worker pool, transparently.
+Vite plugin for [WorkTank](https://github.com/fabiospampinato/worktank) which enables you to execute whole files in a worker pool, transparently.
+
+For more information read the readme for [worktank-esbuild-plugin](https://github.com/fabiospampinato/worktank-esbuild-plugin).
 
 ## Install
 
 ```sh
-npm install --save worktank-vite-plugin
+npm install worktank-vite-plugin
 ```
 
 ## Usage
 
-For more information read [this](https://github.com/fabiospampinato/worktank-loader).
+Let's configure the bundler, mainly we need to tell the "worktank" plugin which files to process:
 
 ```ts
 import {defineConfig} from 'vite';

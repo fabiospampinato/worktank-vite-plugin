@@ -6,8 +6,8 @@
     "compile": "vite build --config vite.js"
   },
   "dependencies": {
-    "mime2ext": "^2.0.0",
-    "webworker-shim": "^1.1.0",
-    "worktank": "^2.3.0"
+    "mime2ext": "^2.0.1",
+    "webworker-shim": "^1.1.4",
+    "worktank": "^3.0.2"
   }
 }
